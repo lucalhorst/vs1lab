@@ -1,3 +1,3 @@
 module.exports = {
-    cookieSecret: 'my_secret'
+  cookieSecret: 'my_secret',
 };
