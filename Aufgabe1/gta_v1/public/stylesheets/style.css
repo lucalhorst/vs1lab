@@ -27,6 +27,9 @@ html {
   --background-color: #efefef;
   --border-color: #cdcdcd;
   --gray-color: #666;
+  --primary-color: #2c3e50;
+  --primary-text-color: #fff;
+  --tag-color: #d6eaf8;
 }
 
 /* HTML element styles */
@@ -48,7 +51,38 @@ a {
 
 /* ### TODO ### Styles for other HTML elements */
 
-/* ... your code here ... */
+h2 {
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--gray-color);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Bigger input boxes for all forms */
+input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+input[type='submit'] {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
 
 /* Grid styles (no changes required) */
 
@@ -109,24 +143,91 @@ a {
 
 /* ### TODO ### Styles for Header Component */
 
-/* ... your code here ... */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.header__image {
+  height: 50px;
+}
+
+.header__navigation {
+  margin-left: auto;
+}
 
 /* ### TODO ### Styles for Main Component */
 
-/* ... your code here ... */
+.main {
+  padding: 1rem;
+  background-color: var(--background-color);
+}
 
 /* ### TODO ### Styles for Tagging component */
 
-/* ... your code here ... */
+/* Vertical arrangement of the tagging inputs */
+#tag-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
 
 /* ### TODO ### Styles for Discovery component */
 
-/* ... your code here ... */
+.discovery__search {
+  margin-bottom: 1rem;
+}
+
+.discovery__search input[type='search'] {
+  width: 60%;
+}
+
+.discovery__results {
+  list-style: none;
+}
+
+.discovery__results li {
+  background-color: var(--tag-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.discovery__map img {
+  display: block;
+  max-width: 100%;
+}
+
+#mapView {
+  border: 1px solid var(--border-color);
+}
 
 /* ### TODO ### Styles for Footer Component */
 
-/* ... your code here ... */
+.footer {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
 
 /* ### TODO ### Media Queries */
 
-/* ... your code here ... */
+/* Collapse all columns below each other on small screens */
+@media (max-width: 850px) {
+  .row {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .row > [class^='col-'],
+  .row > [class*=' col-'] {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
