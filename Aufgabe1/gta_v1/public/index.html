@@ -32,16 +32,16 @@
           <fieldset>
             <legend>Add a new GeoTag</legend>
             <label for="tlat">Latitude:</label>
-            <input type="text" id="tlat" placeholder="31.4159268" />
+            <input type="text" id="tlat" value="31.4159268" readonly />
 
             <label for="tlong">Longitude:</label>
-            <input type="text" id="tlong" placeholder="27.1828182" />
+            <input type="text" id="tlong" value="27.1828182" readonly />
 
             <label for="tname">Name:</label>
-            <input type="text" id="tname" placeholder="e.g. Funny cords" />
+            <input type="text" id="tname" placeholder="e.g. Funny cords" required maxlength="10" />
 
             <label for="thashtag">Hashtag:</label>
-            <input type="text" id="thashtag" placeholder="e.g. #fun" />
+            <input type="text" id="thashtag" placeholder="e.g. #fun" pattern="#[a-zA-Z]{1,10}" />
 
             <input type="submit" value="Add Tag" />
           </fieldset>
