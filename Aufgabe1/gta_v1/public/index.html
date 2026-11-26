@@ -12,15 +12,9 @@
 
   <body>
     <header class="header">
-      <img
-        src="./images/location.png"
-        class="header__image"
-        alt="an image of a map and location"
-      />
+      <img src="./images/location.png" class="header__image" alt="an image of a map and location" />
       <h1 class="header__title">GeoTagApp</h1>
-      <nav class="header__navigation">
-        <a href="#">About</a> | <a href="#">Help</a> | <a href="/">Home</a>
-      </nav>
+      <nav class="header__navigation"><a href="#">About</a> | <a href="#">Help</a> | <a href="/">Home</a></nav>
     </header>
 
     <main class="main row">
@@ -32,16 +26,16 @@
           <fieldset>
             <legend>Add a new GeoTag</legend>
             <label for="tlat">Latitude:</label>
-            <input type="number" id="tlat" value="31.4159268" readonly />
+            <input type="number" id="add_tag__lat" value="31.4159268" readonly />
 
             <label for="tlong">Longitude:</label>
-            <input type="number" id="tlong" value="27.1828182" readonly />
+            <input type="number" id="add_tag__long" value="27.1828182" readonly />
 
             <label for="tname">Name:</label>
-            <input type="text" id="tname" placeholder="e.g. Funny cords" required maxlength="10" />
+            <input type="text" id="add_tag__name" placeholder="e.g. Funny cords" required maxlength="10" />
 
             <label for="thashtag">Hashtag:</label>
-            <input type="text" id="thashtag" placeholder="e.g. #fun" pattern="#[a-zA-Z]{1,10}" />
+            <input type="text" id="add_tag__hashtag" placeholder="e.g. #fun" pattern="#[a-zA-Z]{1,10}" />
 
             <input type="submit" value="Add Tag" />
           </fieldset>
@@ -53,20 +47,15 @@
         <h2 class="discovery__title">Discovery</h2>
 
         <!-- ############### VS1Lab 1a Form 2 Start -->
-        <form
-          class="discovery__search"
-          id="discoveryFilterForm"
-          action="/discovery"
-          method="post"
-        >
+        <form class="discovery__search" id="discoveryFilterForm" action="/discovery" method="post">
           <fieldset>
             <legend>Search</legend>
             <label for="sterm">Searchterm or keywords:</label>
-            <input type="search" id="sterm" placeholder="e.g. fun" />
+            <input type="search" id="search__term" placeholder="e.g. fun" />
 
-            <input type="hidden" id="tlat" placeholder="31.4159268" />
+            <input type="hidden" id="search__lat" placeholder="31.4159268" />
 
-            <input type="hidden" id="tlong" placeholder="27.1828182" />
+            <input type="hidden" id="search__long" placeholder="27.1828182" />
 
             <input type="submit" value="search" />
           </fieldset>
@@ -82,11 +71,7 @@
           </div>
 
           <div id="map" class="discovery__map col-6">
-            <img
-              src="./images/mapview.jpg"
-              alt="a map with locations"
-              id="mapView"
-            />
+            <img src="./images/mapview.jpg" alt="a map with locations" id="mapView" />
             <span>Result map</span>
           </div>
         </div>
